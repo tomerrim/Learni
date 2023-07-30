@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const HEADER_ITEMS = [
-    { title: "Learney", path: "/" },
+    { title: "Learni", path: "/" },
     { title: "Topics", path: "/topics" },
 ]
 

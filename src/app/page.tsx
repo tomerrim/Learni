@@ -9,7 +9,7 @@ export const metadata = {
 export default function HomePage() {
     return (
         <>
-            <div className="homePage">Welcome to Learney</div>
+            <div className="homePage">Welcome to Learni</div>
         </>
     )
 }

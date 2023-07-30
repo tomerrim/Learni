@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .homePage {
-  @apply flex justify-center items-center h-screen text-2xl;
+  @apply flex justify-center items-center h-screen text-5xl;
 }
 
 .nav {
@@ -15,7 +15,7 @@
 }
 
 .topics {
-  @apply flex justify-center items-center p-5
+  @apply flex justify-center items-center flex-wrap p-5
 }
 
 .topicCard {
@@ -36,6 +36,10 @@
 
 .deleteBtn {
   @apply ml-4 bg-red-500 text-white p-1 rounded
+}
+
+.edit {
+  @apply ml-4;
 }
 
 .sectionForm {

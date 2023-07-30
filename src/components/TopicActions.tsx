@@ -20,6 +20,7 @@ export default function TopicActions({ topicId }: TopicActionsProps) {
 
     return (
         <div className="ml-auto flex gap-4">
+            <Link href={`/topics/${topicId}/edit`} className="btn edit">Edit</Link>
             {/* <Btn onClick={onDelete} className="deleteBtn">Delete</Btn> */}
         </div>
     )

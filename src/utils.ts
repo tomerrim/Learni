@@ -17,3 +17,16 @@ export function sendDeleteRequest(topicId: string, url: string) {
         method: "DELETE",
     });
 }
+
+export function formatParagraph(paragraph: string) {
+    // Splitting on ": " to get the introduction and the list of points
+    const [introduction, ...rest] = paragraph.split(": ");
+
+    // Combining the introduction with the list of points
+    const formattedIntroduction = introduction + ":\n\n";
+    const formattedPoints = rest.join(": ").split(/\d+\./).slice(1).map((point, index) => 
+        (index + 1) + "." + point.trim()
+    ).join("\n\n");
+
+    return formattedIntroduction + formattedPoints;
+}

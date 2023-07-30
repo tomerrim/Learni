@@ -13,7 +13,7 @@ export default async function Topics() {
     return (
         <div>
             <h1>Topics</h1>
-            <Link href="/topics/new" className="btn newTopicBtn">new Topic</Link>
+            <Link href="/topics/new" className="btn newTopicBtn">+</Link>
             <div className="topics">
                 {topics.map(topic => (
                     <TopicCard key={topic.id} {...topic}/>
