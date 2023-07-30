@@ -2,26 +2,75 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
+.homePage {
+  @apply flex justify-center items-center h-screen text-2xl;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+.nav {
+  @apply bg-gray-800 px-5 py-5
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+.item {
+  @apply text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium
+}
+
+.topics {
+  @apply flex justify-center items-center p-5
+}
+
+.topicCard {
+  @apply flex justify-center items-center rounded-lg shadow-lg bg-sky-400 w-52 h-52 text-2xl m-5
+}
+
+.formInput {
+  @apply text-sm w-full rounded-sm p-2 text-gray-900 shadow-sm ring-inset ring-1 ring-gray-300 focus:ring-indigo-600;
+}
+
+.btn {
+  @apply bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded;
+}
+
+.newTopicBtn {
+  @apply w-[7vh] h-[7vh] rounded-full absolute bottom-[3%] right-[3%] z-10;
+}
+
+.deleteBtn {
+  @apply ml-4 bg-red-500 text-white p-1 rounded
+}
+
+.sectionForm {
+  @apply mb-4 p-2 ring-inset ring-1 ring-gray-300 rounded;
+}
+
+.section {
+  @apply my-4 p-2;
+}
+
+label {
+  @apply block text-lg font-bold text-gray-700;
+}
+
+h1 {
+  @apply flex justify-center items-center text-5xl font-bold;
+}
+
+h2,
+h3 {
+  @apply flex items-center text-2xl font-bold;
+}
+
+form {
+  @apply pb-10
+}
+
+footer {
+  @apply text-center text-white fixed bottom-0 left-0 right-0 bg-gray-800 p-2.5
+}
+
+form,
+p,
+h2,
+.codeBlock {
+  width: 70%;
+  margin: 0 auto;
 }
