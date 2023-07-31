@@ -15,7 +15,7 @@
 }
 
 .topics {
-  @apply flex justify-center items-center flex-wrap p-5
+  @apply flex justify-center items-center flex-wrap p-8
 }
 
 .topicCard {
@@ -31,7 +31,7 @@
 }
 
 .newTopicBtn {
-  @apply w-[7vh] h-[7vh] rounded-full absolute bottom-[3%] right-[3%] z-10;
+  @apply w-[7vh] h-[7vh] rounded-full fixed bottom-[3%] right-[3%] z-10;
 }
 
 .deleteBtn {
@@ -47,7 +47,7 @@
 }
 
 .section {
-  @apply my-4 p-2;
+  @apply mb-10 my-4 p-2;
 }
 
 label {

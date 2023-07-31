@@ -2,8 +2,8 @@
 export const dynamic = "force-static";
 
 export const metadata = {
-    title: 'Learney',
-    description: "Learney Home Page"
+    title: 'Learni',
+    description: "Learni Home Page"
 }
 
 export default function HomePage() {

@@ -1,4 +1,5 @@
 import './globals.css'
+import 'highlight.js/styles/atom-one-dark.css';
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import Header from '../components/Header'
@@ -21,7 +22,7 @@ export default function RootLayout({
       <body>
         <Header/>
         <main>{children}</main>
-        {/* <Footer/> */}
+        <Footer/>
       </body>
     </html>
   )
