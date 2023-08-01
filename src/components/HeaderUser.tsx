@@ -9,7 +9,7 @@ export default function HeaderUser() {
     const { data: session } = useSession();
 
     function handleSignout() {
-        signOut();
+        signOut({ callbackUrl: '/' });
     }
 
     function fallback() {

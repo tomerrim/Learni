@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .homePage {
-  @apply flex justify-center items-center h-screen text-5xl;
+  @apply flex justify-center items-center h-screen text-5xl overflow-hidden;
 }
 
 .nav {

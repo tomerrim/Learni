@@ -8,6 +8,7 @@ import { saveTopic } from "@/services/topics.client";
 import Section from "@/types/Section";
 import { useRouter } from "next/navigation";
 import { useState } from "react";
+import { useSession } from "next-auth/react";
 
 interface TopicFormProps {
     topicId?: string;
@@ -22,6 +23,8 @@ export default function TopicForm(props: TopicFormProps) {
     const [introduction, setIntroduction] = useState<string>(props?.introduction || "")
     const [sections, setSections] = useState<Section[]>(props?.sections || []);
     const { push } = useRouter();
+    const { data: session } = useSession();
+    const createdBy = session?.user?.email;
 
     function updateSections(newSections: Section[]) {
         setSections(newSections);
@@ -30,7 +33,7 @@ export default function TopicForm(props: TopicFormProps) {
     async function onSubmit(e: React.FormEvent) {
         e.preventDefault();
         try {
-            await saveTopic({id: props.topicId, name, introduction, sections});
+            await saveTopic({id: props.topicId, name, introduction, sections, createdBy});
             console.log("Topic saved successfully");
             push("/topics");
         } catch (error) {

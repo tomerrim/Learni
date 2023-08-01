@@ -1,3 +1,4 @@
+import RestrictedContent from "@/components/RestrictedContent";
 import TopicCard from "@/components/TopicCard";
 import { getTopics } from "@/services/topics.server";
 import Topic from "@/types/Topic";
@@ -13,12 +14,13 @@ export default async function Topics() {
     return (
         <div>
             <h1>Topics</h1>
-            <Link href="/topics/new" className="btn newTopicBtn">
-                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
-                </svg>
-
-            </Link>
+            <RestrictedContent>
+                <Link href="/topics/new" className="btn newTopicBtn">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                        <path strokeLinecap="round" strokeLinejoin="round" d="M12 6v12m6-6H6" />
+                    </svg>
+                </Link>
+            </RestrictedContent>
             <div className="topics">
                 {topics.map(topic => (
                     <TopicCard key={topic.id} {...topic}/>

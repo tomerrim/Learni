@@ -6,4 +6,5 @@ export default interface Topic {
     introduction: string;
     sections: Section[];
     image?: string;
+    createdBy: string | null | undefined;
 }
